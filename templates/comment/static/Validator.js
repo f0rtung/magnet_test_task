@@ -9,7 +9,7 @@ function Validator(){
 	}
 
 	this.validatePhone = function(phone){
-		const phoneRE = new RegExp("^\\(\\d{3}\\)(\\d{7})");
+		const phoneRE = new RegExp("^\\(\\d{3}\\)(\\d{7})$");
 		return null != phone.match(phoneRE);
 	}
 }

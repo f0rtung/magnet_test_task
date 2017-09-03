@@ -103,7 +103,7 @@ def create_application_instance():
 
     @app.route('/api/get_all_cities_by_reg_id$', methods=['POST'])
     def get_all_cities_by_reg_id(request, response, db_object):
-        all_cities = db_object.get_all_cities_by_reg_id(int(request.data["regionID"]))
+        all_cities = db_object.get_all_cities_by_region_id(int(request.data["regionID"]))
         return JSONResponse(response, all_cities)
 
     @app.route('/api/get_all_comments$', methods=['POST'])

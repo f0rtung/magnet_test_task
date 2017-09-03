@@ -5,7 +5,8 @@ class DBFileKeeper:
     def __init__(self, db_file_name):
         self.db_folder = "DataBase"
         self.db_file_name = db_file_name
-        self.full_db_file_path = os.path.join(self.db_folder, self.db_file_name)
+        self.full_db_file_path = os.path.join(self.db_folder,
+                                              self.db_file_name)
 
     def is_exist(self):
         return os.path.exists(self.full_db_file_path)

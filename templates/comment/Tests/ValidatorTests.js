@@ -35,4 +35,16 @@ describe("validatePhone", function(){
 	it("Check phone (222)444556-6", function(){
 		assert.isFalse(validator.validatePhone("(222)444556-6"));
 	});
+
+	it("Check phone (222)44455667", function(){
+		assert.isFalse(validator.validatePhone("(222)44455667"));
+	});
+
+	it("Check phone (222)444556", function(){
+		assert.isFalse(validator.validatePhone("(222)444556"));
+	});
+
+	it("Check phone 2224445566", function(){
+		assert.isFalse(validator.validatePhone("2224445566"));
+	});
 });
